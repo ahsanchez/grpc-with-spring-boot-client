@@ -1,5 +1,6 @@
-package com.example;
+package com.orange.pocs.grpc.pingpong;
 
+import com.orange.pocs.grpc.pingpong.service.PingPongGRPCServiceImpl;
 import lombok.extern.log4j.Log4j2;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,15 +11,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
 @Log4j2
-public class PingPongServiceTest {
+public class PingPongGRPCServiceTest {
 
     @Autowired
-    private GRPCClientService grpcClientService;
+    private PingPongGRPCServiceImpl grpcClientService;
 
     @Test
-    public void ping_happy_path () {
-        String response = grpcClientService.ping();
-        System.out.println(response);
-
+    public void ping_happy_path() {
+        grpcClientService.ping();
     }
 }
