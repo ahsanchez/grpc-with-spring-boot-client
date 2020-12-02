@@ -9,9 +9,9 @@ public class ProductRequest {
     private String id;
     private String name;
     private String description;
-    private long price;
+    private float price;
 
-    public ProductRequest(String name, String description, long price) {
+    public ProductRequest(String name, String description, float price) {
         this.name = name;
         this.description = description;
         this.price = price;

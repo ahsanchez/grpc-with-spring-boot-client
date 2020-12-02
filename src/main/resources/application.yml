@@ -1,16 +1,14 @@
 # local configuration
 server:
-  port: 8082
-grpc:
-  server:
-    port: 9091
+  port: 8081
 
 # remote server configuration
 remote:
-  server:
-    grpc:
-      host: localhost
-      port: 9090
-    restapi:
-      host: http://localhost
-      port: 8083
+  restapi:
+    ms2:
+      product:
+        rest:
+          url: http://localhost:8082/ms2/product/rest
+        grpc:
+          url: http://localhost:8082/ms2/product/grpc
+
